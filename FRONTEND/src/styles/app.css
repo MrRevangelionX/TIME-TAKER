@@ -1,0 +1,160 @@
+/* ---- Paleta sobria y profesional ---- */
+:root {
+  --tt-primary: #2c3e50;     /* azul pizarra */
+  --tt-primary-soft: #34495e;
+  --tt-accent: #1abc9c;      /* verde azulado discreto */
+  --tt-bg: #f4f6f8;
+  --tt-sidebar: #1f2d3d;
+  --tt-text-muted: #7b8a9a;
+}
+
+body {
+  background-color: var(--tt-bg);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #2d3a48;
+}
+
+/* ---- Layout ---- */
+.tt-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.tt-sidebar {
+  width: 250px;
+  background: var(--tt-sidebar);
+  color: #cfd8e3;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.tt-sidebar .tt-brand {
+  padding: 1.4rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.tt-sidebar .nav-link {
+  color: #cfd8e3;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  border-left: 3px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.tt-sidebar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.tt-sidebar .nav-link.active {
+  background: rgba(26, 188, 156, 0.12);
+  color: #fff;
+  border-left-color: var(--tt-accent);
+}
+
+.tt-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.tt-topbar {
+  background: #fff;
+  border-bottom: 1px solid #e6eaef;
+  padding: 0.9rem 1.5rem;
+}
+
+.tt-content {
+  padding: 1.5rem;
+}
+
+/* ---- Tarjetas de métricas ---- */
+.tt-stat-card {
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.tt-stat-card .tt-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.tt-stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.tt-stat-label {
+  color: var(--tt-text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.card {
+  border: none;
+  border-radius: 0.6rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary {
+  background-color: var(--tt-primary);
+  border-color: var(--tt-primary);
+}
+.btn-primary:hover {
+  background-color: var(--tt-primary-soft);
+  border-color: var(--tt-primary-soft);
+}
+
+.btn-accent {
+  background-color: var(--tt-accent);
+  border-color: var(--tt-accent);
+  color: #fff;
+}
+.btn-accent:hover {
+  background-color: #16a085;
+  border-color: #16a085;
+  color: #fff;
+}
+
+/* ---- Badges de estado ---- */
+.badge-status {
+  font-weight: 500;
+  padding: 0.35em 0.6em;
+}
+
+/* ---- DataTables ajustes ---- */
+table.dataTable thead th {
+  background: #f8fafc;
+  color: var(--tt-primary);
+  font-weight: 600;
+  border-bottom: 2px solid #e6eaef !important;
+}
+
+div.dt-buttons .btn {
+  margin-right: 0.35rem;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: var(--tt-primary) !important;
+  border-color: var(--tt-primary) !important;
+  color: #fff !important;
+}

@@ -1,0 +1,20 @@
+{
+    "name": "time-taker/backend",
+    "description": "API REST en PHP para la marcación de tiempos (Time-Taker)",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "ext-pdo": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "scripts": {
+        "migrate": "php migrate.php",
+        "seed": "php seed.php",
+        "serve": "php -S localhost:8000 -t public"
+    }
+}
